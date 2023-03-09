@@ -2,7 +2,7 @@
 def encode(password):
     encodedpassword = ''
     for element in password:
-        element = int(element) + 3
+        element = int(element) + 3 % 10
         encodedpassword = encodedpassword + str(element)
 
     return encodedpassword
