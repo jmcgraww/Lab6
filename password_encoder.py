@@ -7,6 +7,12 @@ def encode(password):
 
     return encodedpassword
 
+def decode(password):
+    decodedpassword = ''
+    for element in password:
+        element = abs(int(element) - 3)
+        decodedpassword = decodedpassword + str(element)
+    return decodedpassword
 
 def main():
     userOption = 0
@@ -17,12 +23,13 @@ def main():
         if userOption == 1:
             password = str(input("Please enter your password to encode: "))
             encodedpassword = encode(password)
+            decodedpassword = decode(encodedpassword)
             print("Your password has been encoded and stored!\n")
         elif userOption == 2:
             if encodedpassword == '':
                 print("No password stored.")
             else:
-                print("The encoded password is " + encodedpassword + ", and the original password is " + password + ".")
+                print("The encoded password is " + encodedpassword + ", and the original password is " + decodedpassword + ".")
         elif userOption == 3:
             break
 
