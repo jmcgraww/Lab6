@@ -18,7 +18,6 @@ def main():
     userOption = 0
     while not userOption == 3:
         print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit\n")
-        encodedpassword = ''
         userOption = int(input("Please enter an option: "))
         if userOption == 1:
             password = str(input("Please enter your password to encode: "))
